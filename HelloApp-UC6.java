@@ -1,56 +1,17 @@
 /*
-*
 *@author:Tulika Sharad
 *@version:1.0
-*
 */
-
-public class OOPSBannerApp_6 {
-
-    public static String[] generateO() {
-        return new String[] {
-            " ***** ",
-            "*     *",
-            "*     *",
-            "*     *",
-            " ***** "
-        };
-    }
-
-    public static String[] generateP() {
-        return new String[] {
-            " ***** ",
-            "*     *",
-            " ***** ",
-            "*      ",
-            "*      "
-        };
-    }
-
-    public static String[] generateS() {
-        return new String[] {
-            " ***** ",
-            "*      ",
-            " ***** ",
-            "      *",
-            " ***** "
-        };
-    }
-
+public class HelloApp_6 {
     public static void main(String[] args) {
-
-        String[][] banner = {
-            generateO(),
-            generateO(),
-            generateP(),
-            generateS()
-        };
-
-        for (int row = 0; row < banner[0].length; row++) {
-            for (int col = 0; col < banner.length; col++) {
-                System.out.print(banner[col][row] + "  ");
-            }
-            System.out.println();
+        StringBuilder nameBuilder = new StringBuilder();
+        for(String name : args){
+            nameBuilder.append(name).append(", ");
         }
+        String name = "World" ;
+        if (nameBuilder.length() >0 ) {
+            name = nameBuilder.substring(0, nameBuilder.length() -2 );
+        }
+        System.out.println("Hello, " +name+ "!");
     }
 }
